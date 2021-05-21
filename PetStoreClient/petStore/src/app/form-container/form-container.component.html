@@ -1,0 +1,16 @@
+
+    <mat-toolbar>
+        <mat-toolbar-row>
+            <a routerLink="/" class="link" routerLinkActive="primary">Home </a>&nbsp;&nbsp;
+            <a *ngIf="isSignedIn()" routerLink="/product" class="link" routerLinkActive="primary">Product</a>&nbsp;&nbsp;
+            <a *ngIf="isSignedIn()" routerLink="/productCategory" class="link" routerLinkActive="primary">Product category</a>&nbsp;&nbsp;
+            <a *ngIf="isSignedIn()" routerLink="/order" class="link" routerLinkActive="primary">Order</a>
+            <button *ngIf="!isSignedIn()" mat-icon-button (click)="login()" class="right-button">
+                <mat-icon>login</mat-icon> Login
+            </button>
+            <button *ngIf="isSignedIn()" mat-icon-button (click)="logout()" class="right-button">
+                <mat-icon>logout</mat-icon> Logout
+            </button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <router-outlet></router-outlet>

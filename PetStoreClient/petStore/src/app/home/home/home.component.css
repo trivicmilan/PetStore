@@ -1,0 +1,16 @@
+.content {
+    padding: 16px;
+    width: 80%;
+    margin: auto;
+}
+
+.content > mat-card {
+    width: 200px;
+}
+mat-label{
+    color: blue;
+}
+.right-button {
+    position: absolute;
+    right: 8px;
+}

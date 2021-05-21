@@ -1,0 +1,14 @@
+<div class="login-container">
+    <form [formGroup]="form" class="login-form">
+        <h3>Login</h3>
+        <mat-form-field>
+            <input matInput type="text" formControlName="username" required autocomplete="off"
+                placeholder="Username" />
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="password" formControlName="password" required autocomplete="off"
+                placeholder="Password" />
+        </mat-form-field>
+        <button mat-button [disabled]="form.invalid" (click)="login(form)">Login</button>
+    </form>
+</div>
